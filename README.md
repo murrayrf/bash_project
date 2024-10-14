@@ -8,7 +8,7 @@ CSV files are a common data format, but processing them manually can be time-con
 
 ## How to Use
 ### Syntax:
-```bash
+
 #Filter rows in the CSV file where the third column (Age) is not empty:
 #Copy the code below to test:
 
@@ -26,4 +26,5 @@ CSV files are a common data format, but processing them manually can be time-con
   ./csv_processor.sh -c 2 -s desc
 
 
+```bash
 ./csv_processor.sh [-f csv_file] [-c column] [-s sort_order] [-a action] [-h]
