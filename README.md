@@ -7,24 +7,24 @@
 CSV files are a common data format, but processing them manually can be time-consuming, especially when performing actions like filtering rows or calculating values. This script provides a quick and easy way to manipulate CSV files, making it ideal for data analysts, administrators, or anyone working with structured data.
 
 ## How to Use
-### Syntax:
-
-#Filter rows in the CSV file where the third column (Age) is not empty:
 #Copy the code below to test:
 
-  ./log_analyzer.sh -f sample_data.csv -c 4 -a sum
+Example #1
+#Sum the values in column 4 ("Score" in sample_data.csv): This will output the sum of the scores in column 4.
 
-#Calculate the sum of values in the fourth column (Score):
-#Copy the code below to test:
+ ./log_analyzer.sh -f sample_data.csv -c 4 -a sum
 
-  ./log_analyzer.sh -c 4 -a sum
-  
+Example #2
+#Filter non-empty rows in column 2 ("Name"): This will display rows where column 2 (the "Name" column) is not empty.
 
-#Sort the CSV file by the second column (Name) in descending order:
-#Copy the code below to test:
+  ./log_analyzer.sh -f sample_data.csv -c 2 -a filter
 
-  ./log_analyzer.sh -c 2 -s desc
+Example #3
+#Calculate the average of ages in column 3: This will calculate and output the average age from column 3.
 
-***Please run this script first***
+  ./log_analyzer.sh -f sample_data.csv -c 3 -a avg
+
+
+***Please run this command first via terminal***
 ```bash
-./log_analyzer.sh -f sample_data.csv -c 4 -a sum
+chmod +x log_analyzer.sh
